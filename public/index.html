@@ -1672,7 +1672,78 @@
                 background: linear-gradient(to right, #ffe28b, #ebaa35);
               }
 
-              /* Responsivo para mobile */
+              /* Centralizar todos os textos no mobile */
+              @media (max-width: 768px) {
+                * {
+                  text-align: center !important;
+                }
+                
+                body, html {
+                  text-align: center !important;
+                }
+                
+                .elementor-element,
+                .elementor-widget-container,
+                .elementor-heading-title,
+                .elementor-text-editor,
+                h1, h2, h3, h4, h5, h6,
+                p, span, div {
+                  text-align: center !important;
+                }
+
+                /* Forçar centralização de títulos específicos */
+                .elementor-element-7c4c4e8,
+                .elementor-element-8415960,
+                .elementor-element-bc712d1,
+                .elementor-element-d33179e,
+                .elementor-widget-heading,
+                .elementor-widget-text-editor {
+                  text-align: center !important;
+                  margin-left: auto !important;
+                  margin-right: auto !important;
+                  justify-content: center !important;
+                  align-items: center !important;
+                }
+
+                /* Centralizar títulos com classes específicas */
+                h2.elementor-heading-title,
+                h3.elementor-heading-title,
+                .elementor-heading-title {
+                  text-align: center !important;
+                  display: block !important;
+                  width: 100% !important;
+                  margin: 0 auto !important;
+                }
+
+                /* Forçar centralização de qualquer elemento que contenha texto */
+                [class*="elementor"],
+                [class*="heading"],
+                [class*="title"] {
+                  text-align: center !important;
+                }
+
+                /* Forçar centralização absoluta - regra mestre */
+                *:not([class*="slick"]):not([class*="carousel"]):not(button):not(input):not(textarea):not(select) {
+                  text-align: center !important;
+                }
+
+                /* Centralizar textos específicos por conteúdo */
+                h2:contains("Quem nós somos"),
+                h2:contains("O conceito por trás da Minha Box"),
+                h3:contains("Chegou sua vez de receber novos looks todos os meses!"),
+                *:contains("Quem nós somos"),
+                *:contains("O conceito por trás da Minha Box"),
+                *:contains("Chegou sua vez de receber novos looks todos os meses!") {
+                  text-align: center !important;
+                  display: block !important;
+                  margin: 0 auto !important;
+                }
+
+                /* Regra final para garantir centralização */
+                body * {
+                  text-align: center !important;
+                }
+              }
               @media (max-width: 768px) {
                 .women-carousel .slick-prev,
                 .women-carousel .slick-next {
