@@ -1556,6 +1556,9 @@
               .women-carousel .slick-prev,
               .women-carousel .slick-next {
                 display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                pointer-events: none !important;
               }
 
               .women-carousel .slick-prev:before,
@@ -1603,7 +1606,6 @@
 
               .carousel-back-btn:hover {
                 background: linear-gradient(to right, #ffe28b, #ebaa35);
-                transform: scale(1.1);
               }
 
               .carousel-next-btn {
@@ -1621,7 +1623,6 @@
                 font-weight: bold;
                 cursor: pointer;
                 z-index: 10;
-                transition: all 0.3s ease;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1629,14 +1630,16 @@
 
               .carousel-next-btn:hover {
                 background: linear-gradient(to right, #ffe28b, #ebaa35);
-                transform: scale(1.1);
               }
 
               /* Responsivo para mobile */
               @media (max-width: 768px) {
                 .women-carousel .slick-prev,
                 .women-carousel .slick-next {
-                  display: none;
+                  display: none !important;
+                  opacity: 0 !important;
+                  visibility: hidden !important;
+                  pointer-events: none !important;
                 }
               }
 
