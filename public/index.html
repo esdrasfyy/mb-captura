@@ -1727,21 +1727,26 @@
                   text-align: center !important;
                 }
 
-                /* Centralizar textos específicos por conteúdo */
-                h2:contains("Quem nós somos"),
-                h2:contains("O conceito por trás da Minha Box"),
-                h3:contains("Chegou sua vez de receber novos looks todos os meses!"),
-                *:contains("Quem nós somos"),
-                *:contains("O conceito por trás da Minha Box"),
-                *:contains("Chegou sua vez de receber novos looks todos os meses!") {
-                  text-align: center !important;
-                  display: block !important;
-                  margin: 0 auto !important;
-                }
-
                 /* Regra final para garantir centralização */
                 body * {
                   text-align: center !important;
+                }
+
+                /* Forçar centralização de todos os elementos de texto */
+                .elementor-element,
+                .elementor-widget,
+                .elementor-widget-wrap,
+                .elementor-widget-container,
+                .elementor-heading-title,
+                .elementor-text-editor,
+                h1, h2, h3, h4, h5, h6,
+                p, span, div,
+                section, article, header, footer, main, aside {
+                  text-align: center !important;
+                  justify-content: center !important;
+                  align-items: center !important;
+                  margin-left: auto !important;
+                  margin-right: auto !important;
                 }
               }
               @media (max-width: 768px) {
