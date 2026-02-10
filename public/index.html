@@ -1546,11 +1546,51 @@
               /* Estilos para o carrossel */
               .women-carousel .slick-slide {
                 margin: 0 10px;
+                width: 300px !important;
               }
 
               .women-carousel .slick-track {
                 display: flex !important;
                 align-items: center;
+              }
+
+              .women-carousel .slick-slide > div {
+                width: 300px !important;
+                height: 390px !important;
+                border-radius: 16px !important;
+                overflow: hidden !important;
+                position: relative !important;
+              }
+
+              .women-carousel .slick-slide img {
+                width: 300px !important;
+                height: 390px !important;
+                object-fit: cover !important;
+                display: block !important;
+                border-radius: 16px !important;
+              }
+
+              .women-carousel .slick-slide .gradient-overlay {
+                position: absolute !important;
+                bottom: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                background: linear-gradient(
+                  to top,
+                  rgba(0, 0, 0, 0.95),
+                  transparent
+                ) !important;
+                padding: 16px !important;
+                padding-bottom: 20px !important;
+              }
+
+              .women-carousel .slick-slide p {
+                color: white !important;
+                font-weight: bold !important;
+                font-size: 18px !important;
+                text-align: center !important;
+                margin: 0 !important;
+                margin-bottom: 8px !important;
               }
 
               .women-carousel .slick-prev,
@@ -1641,6 +1681,14 @@
                   visibility: hidden !important;
                   pointer-events: none !important;
                 }
+
+                .carousel-back-btn,
+                .carousel-next-btn {
+                  padding: 0 !important;
+                  font-size: 14px !important;
+                  width: 35px;
+                  height: 35px;
+                }
               }
 
               @media (max-width: 640px) {
@@ -1693,172 +1741,375 @@
                 <i class="fas fa-chevron-right"></i>
               </button>
               <div class="women-carousel">
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
-                  <img
-                    src="aline-lins.png"
-                    class="w-full h-full object-cover"
-                    alt="Aline Lins"
-                  />
+                <div>
+                  <img src="aline-lins.png" alt="Aline Lins" />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">Aline Lins</p>
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
+                      Aline Lins
+                    </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
-                  <img
-                    src="andreia-almeida.png"
-                    class="w-full h-full object-cover"
-                    alt="Andreia Almeida"
-                  />
+                <div>
+                  <img src="andreia-almeida.png" alt="Andreia Almeida" />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
                       Andreia Almeida
                     </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
-                  <img
-                    src="brendha.png"
-                    class="w-full h-full object-cover"
-                    alt="Brendha"
-                  />
+                <div>
+                  <img src="brendha.png" alt="Brendha" />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">Brendha</p>
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
+                      Brendha
+                    </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
+                <div>
                   <img
                     src="fabia-jasmini.png"
                     class="w-full h-full object-cover"
                     alt="Fabia Jasmini"
                   />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
                       Fabia Jasmini
                     </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
+                <div>
                   <img
                     src="gabi-medeiros.png"
                     class="w-full h-full object-cover"
                     alt="Gabi Medeiros"
                   />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
                       Gabi Medeiros
                     </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
+                <div>
                   <img
                     src="gabrielly-stacci.png"
                     class="w-full h-full object-cover"
                     alt="Gabrielly Stacci"
                   />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
                       Gabrielly Stacci
                     </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
+                <div>
                   <img
                     src="kattia-marcilio.png"
                     class="w-full h-full object-cover"
                     alt="Kattia Marcilio"
                   />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
                       Kattia Marcilio
                     </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
+                <div>
                   <img
                     src="lara-de-reis.png"
                     class="w-full h-full object-cover"
                     alt="Lara de Reis"
                   />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">Lara de Reis</p>
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
+                      Lara de Reis
+                    </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
+                <div>
                   <img
                     src="nalanda-chianello.png"
                     class="w-full h-full object-cover"
                     alt="Nalanda Chianello"
                   />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
                       Nalanda Chianello
                     </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
+                <div>
                   <img
                     src="thaina-natani.png"
                     class="w-full h-full object-cover"
                     alt="Thaina Natani"
                   />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
                       Thaina Natani
                     </p>
                   </div>
                 </div>
-                <div
-                  class="w-full h-[390px] max-md:h-[290px] rounded-2xl overflow-hidden relative"
-                >
+                <div>
                   <img
                     src="thalita-coelho.png"
                     class="w-full h-full object-cover"
                     alt="Thalita Coelho"
                   />
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 to-transparent p-4 pb-8"
+                    class="gradient-overlay"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.95),
+                        transparent
+                      );
+                      padding: 16px;
+                      padding-bottom: 48px;
+                    "
                   >
-                    <p class="text-white font-semibold text-lg">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 8px;
+                      "
+                    >
                       Thalita Coelho
                     </p>
                   </div>
